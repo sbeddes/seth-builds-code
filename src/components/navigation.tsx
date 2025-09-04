@@ -41,7 +41,9 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="font-bold text-xl text-foreground">
+          <div className={`font-bold text-xl transition-colors duration-300 ${
+            isScrolled ? "text-foreground" : "text-white"
+          }`}>
             Seth Beddes
           </div>
 
@@ -51,7 +53,11 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? "text-muted-foreground hover:text-foreground" 
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {item.name}
               </button>
