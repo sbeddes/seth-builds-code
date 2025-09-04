@@ -26,7 +26,7 @@ export function HeroSection() {
               Seth Beddes
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-6">
-              Electrical Engineering Student • AFROTC • Embedded Systems & AI
+              Electrical Engineering Student • AFROTC • Embedded Systems & Technical Communications
             </p>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Honor student at Utah State University with expertise in embedded systems, 
