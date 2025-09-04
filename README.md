@@ -4,6 +4,9 @@
 
 **URL**: https://lovable.dev/projects/08ea85ad-3dea-422f-9d77-806924f8a0cf
 
+This fork removes the "Edit with Lovable" overlay and adds a direct download
+link for the résumé stored in `src/assets`.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
