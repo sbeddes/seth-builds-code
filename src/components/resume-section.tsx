@@ -156,8 +156,6 @@ export function ResumeSection() {
     </section>
   );
 }
-
-        </div>
       </div>
     </section>
   );
