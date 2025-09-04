@@ -45,9 +45,9 @@ export function HeroSection() {
             </Button>
             <Button
               onClick={scrollToContact}
-              variant="outline"
+              variant="secondary"
               size="lg"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 shadow-card transition-all duration-300"
+              className="shadow-card transition-all duration-300"
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
