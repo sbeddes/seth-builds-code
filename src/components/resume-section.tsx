@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, GraduationCap, Code, Briefcase } from "lucide-react";
+import resumePdf from "@/assets/Resume_CAO_4-8-25.pdf";
 
 export function ResumeSection() {
   const skills = {
@@ -36,9 +37,11 @@ export function ResumeSection() {
                 <p className="text-muted-foreground mb-4">
                   Download the complete PDF version of my resume for a detailed overview of my experience and qualifications.
                 </p>
-                <Button className="shadow-elegant">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download PDF Resume
+                <Button asChild className="shadow-elegant">
+                  <a href={resumePdf} download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download PDF Resume
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -131,4 +134,4 @@ export function ResumeSection() {
       </div>
     </section>
   );
-}
+  }
