@@ -1,40 +1,25 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, GraduationCap, Code, Briefcase } from "lucide-react";
 
-const RESUME_URL = "/Resume_CAO_4-8-25.pdf"; // file lives in /public
-
 export function ResumeSection() {
-  const skills: Record<string, string[]> = {
+  const skills = {
     "Electrical & Embedded": ["Circuit Design", "Control Systems", "Arduino/ESP32", "MPU6050", "GPIO Programming"],
-    Programming: ["C/C++", "Python", "Verilog", "CRBasic"],
-    "Systems & Tools": ["Linux (Ubuntu/Kali)", "Windows", "MacOS", "Microsoft Office", "Campbell Scientific Dataloggers"],
+    "Programming": ["C/C++", "Python", "Verilog", "CRBasic"],
+    "Systems & Tools": ["Linux (Ubuntu/Kali)", "Windows", "MacOS", "Microsoft Office", "Campbell Scientific Dataloggers"]
   };
-
-  // Optional iOS-friendly fallback if you ever need to force a download:
-  // const handleDownload = async () => {
-  //   const res = await fetch(RESUME_URL);
-  //   const blob = await res.blob();
-  //   const url = URL.createObjectURL(blob);
-  //   const a = document.createElement("a");
-  //   a.href = url;
-  //   a.download = "Seth_Beddes_Resume.pdf";
-  //   document.body.appendChild(a);
-  //   a.click();
-  //   a.remove();
-  //   URL.revokeObjectURL(url);
-  // };
 
   return (
     <section id="resume" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Resume &amp; Qualifications</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Resume & Qualifications
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Electrical Engineering student with hands-on experience in embedded systems, research, and business development.
+              Electrical Engineering student with hands-on experience in embedded systems, 
+              research, and business development.
             </p>
           </div>
 
@@ -51,21 +36,10 @@ export function ResumeSection() {
                 <p className="text-muted-foreground mb-4">
                   Download the complete PDF version of my resume for a detailed overview of my experience and qualifications.
                 </p>
-
-                {/* Prefer <a download> inside shadcn Button */}
-                <Button asChild className="shadow-elegant">
-                  <a href={RESUME_URL} download="Seth_Beddes_Resume.pdf" aria-label="Download PDF Resume">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download PDF Resume
-                  </a>
-                </Button>
-
-                {/* If you ever need the JS fallback instead:
-                <Button onClick={handleDownload} className="shadow-elegant ml-2">
+                <Button className="shadow-elegant">
                   <Download className="mr-2 h-4 w-4" />
-                  Force Download
+                  Download PDF Resume
                 </Button>
-                */}
               </CardContent>
             </Card>
           </div>
@@ -88,7 +62,7 @@ export function ResumeSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Minor in Mathematics</h3>
-                  <p className="text-sm text-muted-foreground">Honors Student</p>
+                  <p className="text-sm text-muted-foreground">Honor Student</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">AFROTC Cadet</h3>
@@ -97,7 +71,7 @@ export function ResumeSection() {
               </CardContent>
             </Card>
 
-            {/* Technical Skills */}
+            {/* Skills */}
             <Card className="shadow-card hover:shadow-hover transition-all duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-primary">
@@ -119,7 +93,9 @@ export function ResumeSection() {
                         </span>
                       ))}
                       {items.length > 3 && (
-                        <span className="text-xs text-muted-foreground">+{items.length - 3} more</span>
+                        <span className="text-xs text-muted-foreground">
+                          +{items.length - 3} more
+                        </span>
                       )}
                     </div>
                   </div>
@@ -138,24 +114,20 @@ export function ResumeSection() {
               <CardContent className="space-y-3">
                 <div>
                   <h3 className="font-semibold text-sm">Electronics Engineering Assistant</h3>
-                  <p className="text-xs text-muted-foreground">USU Soil Physics • Feb 2024 – May 2025</p>
+                  <p className="text-xs text-muted-foreground">USU Soil Physics • Feb 2024 - May 2025</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Business Development Rep</h3>
-                  <p className="text-xs text-muted-foreground">iWorQ • Sep 2022 – Jan 2023</p>
+                  <p className="text-xs text-muted-foreground">iWorQ • Sep 2022 - Jan 2023</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Tire Technician</h3>
-                  <p className="text-xs text-muted-foreground">Les Schwab • Jan 2020 – Current (Seasonal)</p>
+                  <p className="text-xs text-muted-foreground">Les Schwab • Jan 2020 - Current (Seasonal)</p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
       </div>
     </section>
   );
