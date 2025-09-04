@@ -18,9 +18,9 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <img
-              src={headshotImage}
+              src="/lovable-uploads/7f4f30b6-460a-4e82-9b54-f32dbcc955ec.png"
               alt="Seth Beddes - Electrical Engineering Student"
-              className="w-48 h-48 rounded-full mx-auto mb-6 shadow-elegant border-4 border-primary-foreground/20"
+              className="w-48 h-48 rounded-full mx-auto mb-6 shadow-elegant border-4 border-primary-foreground/20 object-cover"
             />
             <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4">
               Seth Beddes
