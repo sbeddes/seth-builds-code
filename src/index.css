@@ -123,3 +123,13 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide Lovable badge */
+#lovable-badge {
+  display: none !important;
+}
+
+/* Alternative class-based approach for programmatic control */
+.hide-lovable-badge #lovable-badge {
+  display: none !important;
+}
