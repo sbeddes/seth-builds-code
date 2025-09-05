@@ -124,12 +124,26 @@ All colors MUST be HSL.
   }
 }
 
-/* Hide Lovable badge */
-#lovable-badge {
+/* Hide all Lovable branding and edit buttons */
+#lovable-badge,
+[data-lovable-badge],
+.lovable-badge,
+[class*="lovable"],
+[id*="lovable"],
+iframe[src*="lovable"],
+button[aria-label*="Edit"],
+button[title*="Edit"],
+div[class*="edit-button"],
+div[data-testid*="lovable"] {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Alternative class-based approach for programmatic control */
-.hide-lovable-badge #lovable-badge {
+.hide-lovable-badge #lovable-badge,
+.hide-lovable-badge [data-lovable-badge],
+.hide-lovable-badge .lovable-badge {
   display: none !important;
 }
