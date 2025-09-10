@@ -8,7 +8,6 @@ const navItems = [
   { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "OPORD Builder", href: "/opord" },
 ];
 
 export function Navigation() {
@@ -24,15 +23,11 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigate = (href: string) => {
-    if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setIsMobileMenuOpen(false);
-      }
-    } else {
-      window.location.href = href;
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -57,10 +52,10 @@ export function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => navigate(item.href)}
+                onClick={() => scrollToSection(item.href)}
                 className={`transition-colors duration-300 font-medium ${
-                  isScrolled
-                    ? "text-muted-foreground hover:text-foreground"
+                  isScrolled 
+                    ? "text-muted-foreground hover:text-foreground" 
                     : "text-white/90 hover:text-white"
                 }`}
               >
@@ -95,7 +90,7 @@ export function Navigation() {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => navigate(item.href)}
+                  onClick={() => scrollToSection(item.href)}
                   className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
                 >
                   {item.name}
